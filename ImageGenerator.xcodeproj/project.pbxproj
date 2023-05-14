@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49431FD02A11618C00980238 /* PhotosAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49431FCF2A11618C00980238 /* PhotosAlbumViewModel.swift */; };
+		4999A0962A1131E900D322E2 /* PhotosAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */; };
 		499AA43B2A107F5D007D3561 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43A2A107F5D007D3561 /* CarouselView.swift */; };
 		499AA43F2A108344007D3561 /* APIKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43E2A108344007D3561 /* APIKeyViewModel.swift */; };
 		49AD980F2A1090D5002828AB /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD980E2A1090D5002828AB /* CButton.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49431FCF2A11618C00980238 /* PhotosAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAlbumViewModel.swift; sourceTree = "<group>"; };
+		4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAlbumView.swift; sourceTree = "<group>"; };
 		499AA43A2A107F5D007D3561 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		499AA43E2A108344007D3561 /* APIKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyViewModel.swift; sourceTree = "<group>"; };
 		49AD980E2A1090D5002828AB /* CButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */,
+				4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -63,6 +68,7 @@
 			children = (
 				499AA43E2A108344007D3561 /* APIKeyViewModel.swift */,
 				49BC5E902A1084C8005CC62A /* ImageGeneratorViewModel.swift */,
+				49431FCF2A11618C00980238 /* PhotosAlbumViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -200,9 +206,11 @@
 				49DCDC0E2A0ABCC8005B37E3 /* ImageGeneratorView.swift in Sources */,
 				49DCDC0C2A0ABB74005B37E3 /* APIKeyView.swift in Sources */,
 				49DCDBFC2A0AA0B1005B37E3 /* ContentView.swift in Sources */,
+				49431FD02A11618C00980238 /* PhotosAlbumViewModel.swift in Sources */,
 				49DCDBFA2A0AA0B1005B37E3 /* ImageGeneratorApp.swift in Sources */,
 				49BC5E912A1084C8005CC62A /* ImageGeneratorViewModel.swift in Sources */,
 				49AD980F2A1090D5002828AB /* CButton.swift in Sources */,
+				4999A0962A1131E900D322E2 /* PhotosAlbumView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

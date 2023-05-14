@@ -11,9 +11,12 @@ struct CarouselView: View {
     @State private var currentIndex = 0
     
     var images = [
-        Image("waifu-1"),
-        Image("waifu-2"),
-        Image("waifu-3"),
+        Image("trump"),
+        Image("muscle_g_1"),
+        Image("biden"),
+        Image("muscle_g_2"),
+        Image("popeye"),
+        Image("wwe")
     ]
     
     let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
@@ -24,26 +27,15 @@ struct CarouselView: View {
             let frameHeight = geometry.size.height
             
             VStack(alignment: .center){
-                ZStack(alignment: .center) { // align to the right and top
-                    images[(currentIndex + 1) % images.count]
-                        .resizable()
-                        .scaledToFit()
-                        .clipped()
-                        .offset( x: -60, y: 60)
-                    
-                    images[currentIndex]
-                        .resizable()
-                        .scaledToFit()
-                        .clipped()
-                        .offset( x: -30, y: 30)
-                    
-                    images[(currentIndex + 2) % images.count]
-                        .resizable()
-                        .scaledToFit()
-                        .clipped()
+                ZStack(alignment: .center) {
+                       images[currentIndex]
+                           .resizable()
+                           .scaledToFill()
+                           .frame(maxWidth: 400)
+                           .frame(minWidth: 400, minHeight: 400)
+                           .clipped()
+                      
                 }
-                .offset(y: -45)
-                .frame(width: frameWidth, height: 500)
             }
             .frame(width: frameWidth, height: frameHeight)
             .onReceive(timer) { _ in

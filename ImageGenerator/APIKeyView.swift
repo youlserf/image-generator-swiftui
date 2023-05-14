@@ -10,45 +10,45 @@ import SwiftUI
 
 struct APIKeyView: View {
     @StateObject var vm = APIKeyViewModel()
-
-
+    
+    
     var body: some View {
         
         NavigationStack {
             ZStack  {
                 CarouselView()
-            VStack {
-                TextField("Enter your API key", text: $vm.apiKey)
+                VStack {
+                    TextField("Enter your API key", text: $vm.apiKey)
+                        .padding()
+                        .background()
+                        .cornerRadius(15)
+                    
+                    Button("Validate") {
+                        Task {
+                            await vm.validateKey()
+                        }
+                    }
                     .padding()
-                    .background()
+                    .background(.black)
+                    .foregroundColor(.white)
                     .cornerRadius(15)
-                
-                Button("Validate") {
-                    Task {
-                        await vm.validateKey()
+                    .alert(isPresented: $vm.showAlert) {
+                        if vm.isValid {
+                            return Alert(title: Text("API Key is valid!"),  dismissButton: .default(Text("OK"), action: {
+                                
+                                self.vm.isLogged = true
+                                
+                            }))
+                        } else {
+                            return Alert(title: Text("API Key is not valid."))
+                        }
                     }
+                    
                 }
-                .padding()
-                .background(.black)
-                .foregroundColor(.white)
-                .cornerRadius(15)
-                .alert(isPresented: $vm.showAlert) {
-                    if vm.isValid {
-                        return Alert(title: Text("API Key is valid!"),  dismissButton: .default(Text("OK"), action: {
-                                            
-                            self.vm.isLogged = true
-                                            
-                                        }))
-                    } else {
-                        return Alert(title: Text("API Key is not valid."))
-                    }
-                }
-                
-            }
-            .padding(10)
+                .padding(10)
             }
             NavigationLink(
-                destination: HomeView(albumTitle: "My Album"),
+                destination: HomeView(),
                 isActive: $vm.isLogged,
                 label: {
                     EmptyView()
