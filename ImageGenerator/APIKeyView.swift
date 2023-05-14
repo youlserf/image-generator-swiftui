@@ -4,50 +4,56 @@
 //
 //  Created by youlserf on 9/05/23.
 //
-
-import OpenAIKit
 import SwiftUI
 
+
+
 struct APIKeyView: View {
-    @State private var apiKey = ""
-    @State private var isValid = false
-    @State private var showAlert = false
-    func validateKey(key: String) async -> Bool {
-        let config = Configuration(organizationId: "Personal", apiKey: key)
-        let openai = OpenAI(config)
+    @StateObject var vm = APIKeyViewModel()
+
+
+    var body: some View {
         
-        do {
-            _ = try await openai.listModels()
-            return true
-        } catch {
-            return false
+        NavigationStack {
+            ZStack  {
+                CarouselView()
+            VStack {
+                TextField("Enter your API key", text: $vm.apiKey)
+                    .padding()
+                    .background()
+                    .cornerRadius(15)
+                
+                Button("Validate") {
+                    Task {
+                        await vm.validateKey()
+                    }
+                }
+                .padding()
+                .background(.black)
+                .foregroundColor(.white)
+                .cornerRadius(15)
+                .alert(isPresented: $vm.showAlert) {
+                    if vm.isValid {
+                        return Alert(title: Text("API Key is valid!"),  dismissButton: .default(Text("OK"), action: {
+                                            
+                            self.vm.isLogged = true
+                                            
+                                        }))
+                    } else {
+                        return Alert(title: Text("API Key is not valid."))
+                    }
+                }
+                
+            }
+            .padding(10)
+            }
+            NavigationLink(
+                destination: HomeView(albumTitle: "My Album"),
+                isActive: $vm.isLogged,
+                label: {
+                    EmptyView()
+                })
         }
-    }
-
-
-   var body: some View {
-       
-       VStack {
-           TextField("Enter your API key", text: $apiKey)
-               .padding()
-           
-           Button("Validate") {
-               Task {
-                              let response = await validateKey(key: apiKey)
-                              self.isValid = response
-                              
-                              // Show alert based on validation result
-                              self.showAlert = true
-                          }
-           }.alert(isPresented: $showAlert) {
-               if isValid {
-                   return Alert(title: Text("API Key is valid!"))
-               } else {
-                   return Alert(title: Text("API Key is not valid."))
-               }
-           }
-    
-       }
     }
 }
 

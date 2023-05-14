@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499AA43B2A107F5D007D3561 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43A2A107F5D007D3561 /* CarouselView.swift */; };
+		499AA43F2A108344007D3561 /* APIKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43E2A108344007D3561 /* APIKeyViewModel.swift */; };
+		49AD980F2A1090D5002828AB /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD980E2A1090D5002828AB /* CButton.swift */; };
+		49BC5E912A1084C8005CC62A /* ImageGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC5E902A1084C8005CC62A /* ImageGeneratorViewModel.swift */; };
+		49CED42F2A10A7CC00F1E5C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */; };
 		49DCDBFA2A0AA0B1005B37E3 /* ImageGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCDBF92A0AA0B1005B37E3 /* ImageGeneratorApp.swift */; };
 		49DCDBFC2A0AA0B1005B37E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DCDBFB2A0AA0B1005B37E3 /* ContentView.swift */; };
 		49DCDBFE2A0AA0BD005B37E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DCDBFD2A0AA0BD005B37E3 /* Assets.xcassets */; };
@@ -17,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		499AA43A2A107F5D007D3561 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		499AA43E2A108344007D3561 /* APIKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyViewModel.swift; sourceTree = "<group>"; };
+		49AD980E2A1090D5002828AB /* CButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
+		49BC5E902A1084C8005CC62A /* ImageGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorViewModel.swift; sourceTree = "<group>"; };
+		49CED42D2A10A5CF00F1E5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		49DCDBF62A0AA0B1005B37E3 /* ImageGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DCDBF92A0AA0B1005B37E3 /* ImageGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorApp.swift; sourceTree = "<group>"; };
 		49DCDBFB2A0AA0B1005B37E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +50,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499AA43C2A108309007D3561 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		499AA43D2A108321007D3561 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				499AA43E2A108344007D3561 /* APIKeyViewModel.swift */,
+				49BC5E902A1084C8005CC62A /* ImageGeneratorViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		49AD980D2A109033002828AB /* components */ = {
+			isa = PBXGroup;
+			children = (
+				49AD980E2A1090D5002828AB /* CButton.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		49DCDBED2A0AA0B0005B37E3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +94,10 @@
 		49DCDBF82A0AA0B1005B37E3 /* ImageGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				49CED42D2A10A5CF00F1E5C9 /* Info.plist */,
+				49AD980D2A109033002828AB /* components */,
+				499AA43D2A108321007D3561 /* viewmodel */,
+				499AA43C2A108309007D3561 /* views */,
 				49DCDBF92A0AA0B1005B37E3 /* ImageGeneratorApp.swift */,
 				49DCDBFB2A0AA0B1005B37E3 /* ContentView.swift */,
 				49DCDBFD2A0AA0BD005B37E3 /* Assets.xcassets */,
@@ -65,6 +105,7 @@
 				49DCDC002A0AA0BD005B37E3 /* Preview Content */,
 				49DCDC0B2A0ABB74005B37E3 /* APIKeyView.swift */,
 				49DCDC0D2A0ABCC8005B37E3 /* ImageGeneratorView.swift */,
+				499AA43A2A107F5D007D3561 /* CarouselView.swift */,
 			);
 			path = ImageGenerator;
 			sourceTree = "<group>";
@@ -153,10 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CED42F2A10A7CC00F1E5C9 /* HomeView.swift in Sources */,
+				499AA43B2A107F5D007D3561 /* CarouselView.swift in Sources */,
+				499AA43F2A108344007D3561 /* APIKeyViewModel.swift in Sources */,
 				49DCDC0E2A0ABCC8005B37E3 /* ImageGeneratorView.swift in Sources */,
 				49DCDC0C2A0ABB74005B37E3 /* APIKeyView.swift in Sources */,
 				49DCDBFC2A0AA0B1005B37E3 /* ContentView.swift in Sources */,
 				49DCDBFA2A0AA0B1005B37E3 /* ImageGeneratorApp.swift in Sources */,
+				49BC5E912A1084C8005CC62A /* ImageGeneratorViewModel.swift in Sources */,
+				49AD980F2A1090D5002828AB /* CButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +329,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageGenerator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to save images to your photo library in order to share them with friends.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -319,6 +370,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageGenerator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to save images to your photo library in order to share them with friends.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
