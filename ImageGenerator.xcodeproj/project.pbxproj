@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		49431FD02A11618C00980238 /* PhotosAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49431FCF2A11618C00980238 /* PhotosAlbumViewModel.swift */; };
+		49431FD32A11689400980238 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49431FD22A11689400980238 /* PhotoGridView.swift */; };
+		49431FD52A1168E000980238 /* FullscreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49431FD42A1168E000980238 /* FullscreenImageView.swift */; };
+		49431FD72A11692D00980238 /* PhotoGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49431FD62A11692D00980238 /* PhotoGridCell.swift */; };
 		4999A0962A1131E900D322E2 /* PhotosAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */; };
 		499AA43B2A107F5D007D3561 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43A2A107F5D007D3561 /* CarouselView.swift */; };
 		499AA43F2A108344007D3561 /* APIKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AA43E2A108344007D3561 /* APIKeyViewModel.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		49431FCF2A11618C00980238 /* PhotosAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAlbumViewModel.swift; sourceTree = "<group>"; };
+		49431FD22A11689400980238 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
+		49431FD42A1168E000980238 /* FullscreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenImageView.swift; sourceTree = "<group>"; };
+		49431FD62A11692D00980238 /* PhotoGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridCell.swift; sourceTree = "<group>"; };
 		4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAlbumView.swift; sourceTree = "<group>"; };
 		499AA43A2A107F5D007D3561 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		499AA43E2A108344007D3561 /* APIKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyViewModel.swift; sourceTree = "<group>"; };
@@ -54,11 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49431FD12A11686C00980238 /* photoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				49431FD22A11689400980238 /* PhotoGridView.swift */,
+				49431FD42A1168E000980238 /* FullscreenImageView.swift */,
+				49431FD62A11692D00980238 /* PhotoGridCell.swift */,
+			);
+			path = photoAlbum;
+			sourceTree = "<group>";
+		};
 		499AA43C2A108309007D3561 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */,
+				499AA43A2A107F5D007D3561 /* CarouselView.swift */,
+				49DCDC0B2A0ABB74005B37E3 /* APIKeyView.swift */,
+				49DCDC0D2A0ABCC8005B37E3 /* ImageGeneratorView.swift */,
 				4999A0952A1131E900D322E2 /* PhotosAlbumView.swift */,
+				49CED42E2A10A7CC00F1E5C9 /* HomeView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -76,6 +95,7 @@
 		49AD980D2A109033002828AB /* components */ = {
 			isa = PBXGroup;
 			children = (
+				49431FD12A11686C00980238 /* photoAlbum */,
 				49AD980E2A1090D5002828AB /* CButton.swift */,
 			);
 			path = components;
@@ -109,9 +129,6 @@
 				49DCDBFD2A0AA0BD005B37E3 /* Assets.xcassets */,
 				49DCDBFF2A0AA0BD005B37E3 /* ImageGenerator.entitlements */,
 				49DCDC002A0AA0BD005B37E3 /* Preview Content */,
-				49DCDC0B2A0ABB74005B37E3 /* APIKeyView.swift */,
-				49DCDC0D2A0ABCC8005B37E3 /* ImageGeneratorView.swift */,
-				499AA43A2A107F5D007D3561 /* CarouselView.swift */,
 			);
 			path = ImageGenerator;
 			sourceTree = "<group>";
@@ -201,11 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CED42F2A10A7CC00F1E5C9 /* HomeView.swift in Sources */,
+				49431FD32A11689400980238 /* PhotoGridView.swift in Sources */,
 				499AA43B2A107F5D007D3561 /* CarouselView.swift in Sources */,
 				499AA43F2A108344007D3561 /* APIKeyViewModel.swift in Sources */,
 				49DCDC0E2A0ABCC8005B37E3 /* ImageGeneratorView.swift in Sources */,
 				49DCDC0C2A0ABB74005B37E3 /* APIKeyView.swift in Sources */,
+				49431FD52A1168E000980238 /* FullscreenImageView.swift in Sources */,
 				49DCDBFC2A0AA0B1005B37E3 /* ContentView.swift in Sources */,
+				49431FD72A11692D00980238 /* PhotoGridCell.swift in Sources */,
 				49431FD02A11618C00980238 /* PhotosAlbumViewModel.swift in Sources */,
 				49DCDBFA2A0AA0B1005B37E3 /* ImageGeneratorApp.swift in Sources */,
 				49BC5E912A1084C8005CC62A /* ImageGeneratorViewModel.swift in Sources */,
@@ -335,10 +355,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = L3KPYVQ5G3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageGenerator/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Muscle Manga";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to save images to your photo library in order to share them with friends.";
@@ -348,6 +369,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -360,7 +382,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.primalcode.ImageGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,10 +400,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = L3KPYVQ5G3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageGenerator/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Muscle Manga";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs to save images to your photo library in order to share them with friends.";
@@ -389,6 +414,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -401,7 +427,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.primalcode.ImageGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,12 +9,10 @@ import Foundation
 import OpenAIKit
 import UIKit
 import Photos
-
 final class ImageGeneratorViewModel: ObservableObject {
     private var openai: OpenAI?
     func setup(){
-        if let apiKey = UserDefaults.standard.string(forKey: "api-key"){
-            print(apiKey)
+        if let apiKey = getAPIKey(){
             openai = OpenAI(
                 Configuration(organizationId: "Personal", apiKey:  apiKey))
         }
@@ -37,8 +35,10 @@ final class ImageGeneratorViewModel: ObservableObject {
         catch {
             print(String(describing: error))
             return nil
+            
         }
     }
+
     
     func saveImageToAlbum(image: UIImage, assetCollection: PHAssetCollection) {
         PHPhotoLibrary.shared().performChanges({

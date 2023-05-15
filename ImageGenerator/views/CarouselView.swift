@@ -31,8 +31,8 @@ struct CarouselView: View {
                        images[currentIndex]
                            .resizable()
                            .scaledToFill()
-                           .frame(maxWidth: 400)
-                           .frame(minWidth: 400, minHeight: 400)
+                           .frame(maxWidth: frameWidth)
+                           .frame(minWidth: frameWidth, minHeight: 400)
                            .clipped()
                       
                 }
